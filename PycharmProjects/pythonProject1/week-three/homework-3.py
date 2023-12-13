@@ -26,15 +26,24 @@ else:
 # Write a program that takes a year (e.g. 1872) and outputs the century and decade (e.g. "Nineteenth Century, Seventies")
 
 
-book_century = int(input('what year was your book written?'))
-eighteenth_century = book_century == 1800
-nineteenth_century = book_century == 1801 <= 1900
-twentieth_century = book_century == 1901 <= 2000
+book_year = int(input('What year was your book written?'))
+
+eighteenth_century = 1700 <= book_year <= 1800
+nineteenth_century = 1801 <= book_year <= 1900
+twentieth_century = 1901 <= book_year <= 2000
 
 if eighteenth_century:
-    print('Eighteenth Century, noughties')
+    print('Eighteenth Century')
+    decade = (book_year - 1700) // 10
+    print(f'Decade: {decade}th')
 elif nineteenth_century:
     print('Nineteenth Century')
+    decade = (book_year - 1800) // 10
+    print(f'Decade: {decade}th')
 elif twentieth_century:
     print('Twentieth Century')
+    decade = (book_year - 1900) // 10
+    print(f'Decade: {decade}th')
+else:
+    print('Not in the specified centuries')
 
