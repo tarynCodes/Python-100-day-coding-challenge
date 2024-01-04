@@ -24,12 +24,12 @@
 # Save the updated to-do items
 # You will need to manually create a new file called todo.txt in the same folder as your program before you
 # start
-new_item = input('Enter a task for your todo list: ')
-with open('todo.txt', 'r') as text_file: #read file
-    todo = text_file.read()
-todo += new_item + '\n'
-with open('todo.txt', 'w') as text_file:
-    text_file.write(todo)
+# new_item = input('Enter a task for your todo list: ')
+# with open('todo.txt', 'r') as text_file: #read file
+#     todo = text_file.read()
+# todo += new_item + '\n'
+# with open('todo.txt', 'w') as text_file:
+#     text_file.write(todo)
 
 
 import csv
@@ -53,3 +53,24 @@ with open('team.csv', 'w+') as csv_file:
     spreadsheet.writeheader()
 
     spreadsheet.writerows(data)
+
+# Exercise 5.2: This program is supposed to read data about trees from a file to find the shortest tree. Complete
+#
+# the program adding code to open trees.csv .
+#
+# The trees.csv file included with your student guides. Save the csv file in the same folder as your Python
+#
+# program.
+
+with open('trees.csv', 'r') as csv_file:
+    spreadsheet = csv.DictReader(csv_file)
+    heights = []
+
+    for row in spreadsheet:
+        tree_height = row['height']
+        heights.append(tree_height)
+
+    shortest_height = min(heights)
+
+print(shortest_height)
+
