@@ -56,3 +56,11 @@ height_bmi = float(height) * float(height)
 bmi = int(weight) / height_bmi
 int_bmi = int(bmi)
 print(int_bmi)
+
+#number manipulation
+print(round(2.666666, 2)) #round -> round up, the second 2 is the how many decimal places
+print(8 // 3) #floor -> change to a whole number round down
+score = 0
+score += 1 #will add one to score
+print(score)
+print(f"your score is {score}") #f strings are good for printing all datatypes
