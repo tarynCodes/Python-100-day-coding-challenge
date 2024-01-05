@@ -23,7 +23,6 @@ a = float(123)
 print(type(a)) #can use type function to find out the datatype we are working with
 
 
-
 #challenge - split the string and total up the sum of the two numbers
 two_digit_number = "34"
 
@@ -36,3 +35,24 @@ second_digit = int(two_digit_number[1])
 total = first_digit + second_digit
 print(total)
 
+
+#mathematical operations
+3 + 5
+7 - 4
+3 * 2
+6 / 3
+2 ** 3 # to the power of
+
+print(3 * 3 / 3 + 3 - 3) #BIMDAS
+
+
+#Challenge BMI calculator
+# 1st input: enter height in meters e.g: 1.65
+height = 1.65
+# 2nd input: enter weight in kilograms e.g: 72
+weight = 72
+# 🚨 Don't change the code above 👆
+height_bmi = float(height) * float(height)
+bmi = int(weight) / height_bmi
+int_bmi = int(bmi)
+print(int_bmi)
