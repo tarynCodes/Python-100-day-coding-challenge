@@ -64,3 +64,5 @@ score = 0
 score += 1 #will add one to score
 print(score)
 print(f"your score is {score}") #f strings are good for printing all datatypes
+
+#challenge how many weeks do you have left in life
