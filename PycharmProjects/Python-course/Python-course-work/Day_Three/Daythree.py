@@ -19,7 +19,6 @@ else:
 
 # Which number do you want to check?
 number = int(input("What is your chosen number?"))
-# 🚨 Don't change the code above 👆
 if number % 2 == 0:
     print("This is an even number.")
 else:
@@ -40,6 +39,8 @@ if height >= 120:
     elif age <= 18:
         bill = 7
         print("Youth tickets are £7")
+    elif 45 <= age <= 55:
+        print("Have a free ride on us")
     else:
         bill = 12
         print("Adult tickets are £12")
@@ -84,11 +85,10 @@ else:
 
 # Pizza Order
 print("Thank you for choosing Python Pizza Deliveries!")
-size = input() # What size pizza do you want? S, M, or L
-add_pepperoni = input() # Do you want pepperoni? Y or N
-extra_cheese = input() # Do you want extra cheese? Y or N
-# 🚨 Don't change the code above 👆
-# Write your code below this line 👇
+size = input("What size pizza do you want? S, M, or L")
+add_pepperoni = input("Do you want pepperoni? Y or N")
+extra_cheese = input("Do you want extra cheese? Y or N")
+
 bill = 0
 
 if size == "S":
@@ -105,3 +105,36 @@ if add_pepperoni == "Y":
 if extra_cheese == "Y":
     bill += 1
 print(f"Your final bill is: ${bill}.")
+
+
+# love calculator
+print("The Love Calculator is calculating your score...")
+name1 = input("what is your name?")
+name2 = input("What is their name?")
+
+lowercase_name_1 = name1.lower()
+lowercase_name_2 = name2.lower()
+lowercase_names = lowercase_name_1 + lowercase_name_2
+
+T = lowercase_names.count("t")
+R = lowercase_names.count("r")
+U = lowercase_names.count("u")
+E = lowercase_names.count("e")
+true_score = T + R + U + E
+
+L = lowercase_names.count("l")
+O = lowercase_names.count("o")
+v = lowercase_names.count("v")
+e = lowercase_names.count("e")
+love_score = L + O + v + e
+
+true_love_score = str(true_score) + str(love_score)
+total = int(true_love_score)
+
+if total < 10 or total > 90:
+    print(f"Your score is {true_love_score}, you go together like coke and mentos.")
+elif 40 < total < 50:
+    print(f"Your score is {true_love_score}, you are alright together.")
+else:
+    print(f"Your score is {true_love_score}.")
+
