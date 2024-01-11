@@ -10,14 +10,6 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-# create a loop for letter
-# loop through numbers
-# loop through symbols
-# pull out required number of each using random.choice
-# randomise the password - random.shuffle
-
-# Easy version - non shuffled
-
 password = ""
 
 for letter in range(1, nr_letters + 1):

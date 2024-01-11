@@ -1,37 +1,37 @@
-# # Loops
-# fruits = ["Apple", "Peach", "Pear"]
-# for fruit in fruits:
-#     print(fruit)
-#     print(fruit + " Pie")
-# # Prints all fruit in list
-#
-# # Average height challenge
-#
-# student_heights = input("Input a Python list of student heights").split()
-# for n in range(0, len(student_heights)):
-#     student_heights[n] = int(student_heights[n])
-# total_height = 0
-# number_of_students = 0
-# for student in student_heights:
-#     number_of_students += 1
-#     total_height += student
-# average_height = round(total_height / number_of_students)
-#
-# print(f"total height = {total_height}")
-# print(f"number of students = {number_of_students}")
-# print(f"average height = {average_height}")
-#
-# # Largest score finder
-# student_scores = input("Input a list of student scores").split()
-# for n in range(0, len(student_scores)):
-#   student_scores[n] = int(student_scores[n])
-#
-# largest_score = student_scores[0]
-# for student in student_scores:
-#   if student > largest_score:
-#     largest_score = student
-#
-# print(f"The highest score in the class is: {largest_score}")
+# Loops
+fruits = ["Apple", "Peach", "Pear"]
+for fruit in fruits:
+    print(fruit)
+    print(fruit + " Pie")
+# Prints all fruit in list
+
+# Average height challenge
+
+student_heights = input("Input a Python list of student heights").split()
+for n in range(0, len(student_heights)):
+    student_heights[n] = int(student_heights[n])
+total_height = 0
+number_of_students = 0
+for student in student_heights:
+    number_of_students += 1
+    total_height += student
+average_height = round(total_height / number_of_students)
+
+print(f"total height = {total_height}")
+print(f"number of students = {number_of_students}")
+print(f"average height = {average_height}")
+
+# Largest score finder
+student_scores = input("Input a list of student scores").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+
+largest_score = student_scores[0]
+for student in student_scores:
+  if student > largest_score:
+    largest_score = student
+
+print(f"The highest score in the class is: {largest_score}")
 
 # range function - generate a range of numbers to loop through
 count = 0
