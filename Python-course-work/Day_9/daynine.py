@@ -54,4 +54,65 @@ for student in student_scores:
 
 print(student_grades)
 
+#################################################################################
+# Nesting
+# {key: [list], key: {dict}}
+capitals = {
+        "France": "Paris",
+        "Germany": "Berlin"
+        }
 
+travel_log = {
+    "France": {"cities_visited": ["Paris", "Lille", "Dijon"], "total_visits": 12},
+    "Germany": {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"], "total_pretzels": 25}
+    }
+
+print(travel_log["France"]["cities_visited"])
+
+# Nesting a dictionary in a list
+
+travel_log = [
+    {
+        "country": "France",
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 12
+    },
+    {
+        "country": "Germany",
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "total_visits": 25
+    }
+    ]
+
+# challenge add new country as a dictionary to travel_log list
+
+country = input("Add country name")
+visits = int(input("Number of visits"))
+list_of_cities = eval(input("list the cities you've been to"))
+
+travel_log = [
+  {
+    "country": "France",
+    "visits": 12,
+    "cities": ["Paris", "Lille", "Dijon"]
+  },
+  {
+    "country": "Germany",
+    "visits": 5,
+    "cities": ["Berlin", "Hamburg", "Stuttgart"]
+  },
+]
+
+
+def add_new_country(name=country, time_visited=visits, cities_visited=list_of_cities):
+    new_country = {
+                "country": name,
+                "visits": time_visited,
+                "cities": cities_visited
+                }
+    travel_log.append(new_country)
+
+
+add_new_country(country, visits, list_of_cities)
+print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+print(f"My favourite city was {travel_log[2]['cities'][0]}.")
