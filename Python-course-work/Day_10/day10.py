@@ -1,6 +1,8 @@
 # Functions with outputs
 
 def format_name(f_name, l_name):
+    """Take a first and last name and format it to return
+    the title case version of the name"""   # doc string
     if f_name == "" or l_name == "":
         return ("Please fill in your first name, then your last name")
     formated_f_name = f_name.title()
@@ -38,3 +40,5 @@ year = int(input("Enter a year"))
 month = int(input("Enter a month"))
 days = days_in_month(year, month)
 print(days)
+
+
